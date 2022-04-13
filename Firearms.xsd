@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Firearms">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Firearm" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Model" type="xs:string"/>
+                            <xs:element name="Handy">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="one-handed"/>
+                                        <xs:enumeration value="two-handed"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="Origin" type="xs:string"/>
+                            <xs:element name="TTC">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Range">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="close"/>
+                                                    <xs:enumeration value="average"/>
+                                                    <xs:enumeration value="distant"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="EffectiveRange" type="xs:positiveInteger" minOccurs="0">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:positiveInteger">
+                                                    <xs:minInclusive value="0"/>
+                                                    <xs:maxInclusive value="5000"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="Clip" type="xs:boolean"/>
+                                        <xs:element name="Optics" type="xs:boolean"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Material" type="xs:string"/>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

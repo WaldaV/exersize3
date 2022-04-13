@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Firearms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Firearms.xsd">
+    <Firearm id="1">
+        <Model>AK-47</Model>
+        <Handy>two-handed</Handy>
+        <Origin>Russia</Origin>
+        <TTC>
+            <Range>distant</Range>
+            <EffectiveRange>1000</EffectiveRange>
+            <Clip>true</Clip>
+            <Optics>false</Optics>
+        </TTC>
+        <Material>Metal</Material>
+    </Firearm>
+    <Firearm id="2">
+        <Model>Mauser 1934</Model>
+        <Handy>one-handed</Handy>
+        <Origin>German</Origin>
+        <TTC>
+            <Range>close</Range>
+            <EffectiveRange>40</EffectiveRange>
+            <Clip>true</Clip>
+            <Optics>false</Optics>
+        </TTC>
+        <Material>Metal</Material>
+    </Firearm>
+</Firearms>
